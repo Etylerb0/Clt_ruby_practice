@@ -1,18 +1,18 @@
-puts "What is your name?"
+# MAKE THIS PROGRAM RECEIVE INCHES/POUNDS FORM THE USER.
 
-my_name = gets.chomp # Elijah Brown {enter}
+def convert_pounds_to_kilograms(pounds) #define method
+   weight_kilograms = pounds * 0.453592
+   return weight_kilograms
+end
 
-puts "What is your height in inches?"
 
-my_height = gets.to_i
 
-puts "What is your weight?"
+puts "What is your weight in pounds?"
 
-my_weight = gets.to_i
+my_weight = gets.chomp.to_i
 
-height_centimeters = my_height * 2.54
 
-weight_kilograms = my_weight * 0.453592
+weight_kilograms = convert_pounds_to_kilograms(my_weight)
 
-puts my_name + ' is ' + height_centimeters.to_s + ' cm and ' + weight_kilograms.to_s + 'kg.'
+puts weight_kilograms
 
